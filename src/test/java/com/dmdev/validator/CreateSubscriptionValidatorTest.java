@@ -20,7 +20,11 @@ class CreateSubscriptionValidatorTest {
     @Test
     void validationSuccess() {
         CreateSubscriptionDto dto = CreateSubscriptionDto.builder()
-                .userId(1).name("Ivan").provider(Provider.APPLE.name()).expirationDate(Instant.parse("2029-10-05T14:30:00Z")).build();
+                .userId(1)
+                .name("Ivan")
+                .provider(Provider.APPLE.name())
+                .expirationDate(Instant.parse("2029-10-05T14:30:00Z"))
+                .build();
 
         ValidationResult actualResult = validator.validate(dto);
         assertFalse(actualResult.hasErrors());

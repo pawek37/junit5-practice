@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c507ee89-428d-4521-bbde-c12f6293e7f5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/validator/CreateSubscriptionValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/validator/CreateSubscriptionValidatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +52,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.CreateSubscriptionMapperTest.mapSuccess.executor": "Run",
     "JUnit.CreateSubscriptionValidatorTest.executor": "Run",
     "JUnit.CreateSubscriptionValidatorTest.validationFailByName.executor": "Run",
     "JUnit.CreateSubscriptionValidatorTest.validationFailByUserId.executor": "Run",
@@ -109,12 +105,29 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.dmdev.mapper" />
       <recent name="com.dmdev.validator" />
       <recent name="com.dmdev.util" />
       <recent name="com.dmdev.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CreateSubscriptionValidatorTest">
+  <component name="RunManager" selected="JUnit.CreateSubscriptionMapperTest.mapSuccess">
+    <configuration name="CreateSubscriptionMapperTest.mapSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit5-trainer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dmdev.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dmdev.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.mapper.CreateSubscriptionMapperTest" />
+      <option name="METHOD_NAME" value="mapSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CreateSubscriptionValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5-trainer" />
       <extension name="coverage">
@@ -126,22 +139,6 @@
       <option name="PACKAGE_NAME" value="com.dmdev.validator" />
       <option name="MAIN_CLASS_NAME" value="com.dmdev.validator.CreateSubscriptionValidatorTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreateSubscriptionValidatorTest.validationFailByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="junit5-trainer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dmdev.validator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dmdev.validator" />
-      <option name="MAIN_CLASS_NAME" value="com.dmdev.validator.CreateSubscriptionValidatorTest" />
-      <option name="METHOD_NAME" value="validationFailByName" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -196,11 +193,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CreateSubscriptionMapperTest.mapSuccess" />
         <item itemvalue="JUnit.CreateSubscriptionValidatorTest" />
         <item itemvalue="JUnit.CreateSubscriptionValidatorTest.validationFailByWrongDifferentValues" />
         <item itemvalue="JUnit.CreateSubscriptionValidatorTest.validationFailByWrongExpirationDate" />
         <item itemvalue="JUnit.CreateSubscriptionValidatorTest.validationFailByUserId" />
-        <item itemvalue="JUnit.CreateSubscriptionValidatorTest.validationFailByName" />
       </list>
     </recent_temporary>
   </component>
