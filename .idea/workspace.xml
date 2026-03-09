@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c507ee89-428d-4521-bbde-c12f6293e7f5" name="Changes" comment="" />
+    <list default="true" id="c507ee89-428d-4521-bbde-c12f6293e7f5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,18 +28,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "pawek37"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;pawek37&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/dmdev2020/junit5-trainer.git",
-    "accountId": "e7e5f058-eef1-4ed2-b9b0-e6eadc6b585f"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/dmdev2020/junit5-trainer.git&quot;,
+    &quot;accountId&quot;: &quot;e7e5f058-eef1-4ed2-b9b0-e6eadc6b585f&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -39,9 +47,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="3AfGjeGfelRI2d6Nk8Ze0hHvVQw" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -49,12 +57,20 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.CreateSubscriptionValidatorTest.executor": "Run",
+    "JUnit.CreateSubscriptionValidatorTest.validationFailByName.executor": "Run",
+    "JUnit.CreateSubscriptionValidatorTest.validationFailByUserId.executor": "Run",
+    "JUnit.CreateSubscriptionValidatorTest.validationFailByWrongDifferentValues.executor": "Run",
+    "JUnit.CreateSubscriptionValidatorTest.validationFailByWrongExpirationDate.executor": "Run",
+    "JUnit.CreateSubscriptionValidatorTest.validationSuccess.executor": "Run",
     "JUnit.CreateUserMapperTest.mapTesting.executor": "Run",
     "JUnit.CreateUserValidatorTest.executor": "Run",
     "JUnit.LocalDateFormatterTest.TestingValidationMethod.executor": "Run",
     "JUnit.LocalDateFormatterTest.format.executor": "Run",
     "JUnit.LocalDateFormatterTest.shouldThrowExceptionWhenDateIsInvalid.executor": "Run",
     "JUnit.PropertiesUtilTest.checkGet.executor": "Run",
+    "JUnit.PropertiesUtilTest.executor": "Run",
+    "JUnit.PropertiesUtilTest.get.executor": "Run",
     "JUnit.UserDaoTest.deleteNonExisting.executor": "Run",
     "JUnit.UserDaoTest.executor": "Run",
     "JUnit.UserDaoTest.findAll.executor": "Run",
@@ -66,14 +82,19 @@
     "JUnit.UserServiceTest.createSuccess.executor": "Run",
     "JUnit.UserServiceTest.loginFail.executor": "Run",
     "JUnit.UserServiceTest.loginSuccess.executor": "Run",
+    "JUnit.ValidationResultTest.add.executor": "Run",
+    "JUnit.ValidationResultTest.hasErrors.executor": "Run",
+    "JavaClassFindUsagesOptions.isFieldsUsages": "true",
+    "JavaClassFindUsagesOptions.isMethodsUsages": "true",
     "Maven.junit5-trainer [verify].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "fix-branch",
+    "git-widget-placeholder": "homework",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/junit5-trainer",
@@ -88,84 +109,86 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.dmdev.dao" />
+      <recent name="com.dmdev.validator" />
       <recent name="com.dmdev.util" />
+      <recent name="com.dmdev.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceIT">
-    <configuration name="UserDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CreateSubscriptionValidatorTest">
+    <configuration name="CreateSubscriptionValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5-trainer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dmdev.dao.*" />
+          <option name="PATTERN" value="com.dmdev.validator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dmdev.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.dmdev.dao.UserDaoTest" />
+      <option name="PACKAGE_NAME" value="com.dmdev.validator" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.validator.CreateSubscriptionValidatorTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoTest.deleteNonExisting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateSubscriptionValidatorTest.validationFailByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5-trainer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dmdev.dao.*" />
+          <option name="PATTERN" value="com.dmdev.validator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dmdev.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.dmdev.dao.UserDaoTest" />
-      <option name="METHOD_NAME" value="deleteNonExisting" />
+      <option name="PACKAGE_NAME" value="com.dmdev.validator" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.validator.CreateSubscriptionValidatorTest" />
+      <option name="METHOD_NAME" value="validationFailByName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateSubscriptionValidatorTest.validationFailByUserId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5-trainer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dmdev.dao.*" />
+          <option name="PATTERN" value="com.dmdev.validator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dmdev.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.dmdev.dao.UserDaoTest" />
-      <option name="METHOD_NAME" value="update" />
+      <option name="PACKAGE_NAME" value="com.dmdev.validator" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.validator.CreateSubscriptionValidatorTest" />
+      <option name="METHOD_NAME" value="validationFailByUserId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateSubscriptionValidatorTest.validationFailByWrongDifferentValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5-trainer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dmdev.service.*" />
+          <option name="PATTERN" value="com.dmdev.validator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dmdev.service" />
-      <option name="MAIN_CLASS_NAME" value="com.dmdev.service.UserServiceIT" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.dmdev.validator" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.validator.CreateSubscriptionValidatorTest" />
+      <option name="METHOD_NAME" value="validationFailByWrongDifferentValues" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceIT.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateSubscriptionValidatorTest.validationFailByWrongExpirationDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5-trainer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dmdev.service.*" />
+          <option name="PATTERN" value="com.dmdev.validator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dmdev.service" />
-      <option name="MAIN_CLASS_NAME" value="com.dmdev.service.UserServiceIT" />
-      <option name="METHOD_NAME" value="create" />
+      <option name="PACKAGE_NAME" value="com.dmdev.validator" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.validator.CreateSubscriptionValidatorTest" />
+      <option name="METHOD_NAME" value="validationFailByWrongExpirationDate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -173,11 +196,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserServiceIT" />
-        <item itemvalue="JUnit.UserServiceIT.create" />
-        <item itemvalue="JUnit.UserDaoTest" />
-        <item itemvalue="JUnit.UserDaoTest.update" />
-        <item itemvalue="JUnit.UserDaoTest.deleteNonExisting" />
+        <item itemvalue="JUnit.CreateSubscriptionValidatorTest" />
+        <item itemvalue="JUnit.CreateSubscriptionValidatorTest.validationFailByWrongDifferentValues" />
+        <item itemvalue="JUnit.CreateSubscriptionValidatorTest.validationFailByWrongExpirationDate" />
+        <item itemvalue="JUnit.CreateSubscriptionValidatorTest.validationFailByUserId" />
+        <item itemvalue="JUnit.CreateSubscriptionValidatorTest.validationFailByName" />
       </list>
     </recent_temporary>
   </component>
