@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c507ee89-428d-4521-bbde-c12f6293e7f5" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "pawek37"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/dmdev2020/junit5-trainer.git",
+    "accountId": "e7e5f058-eef1-4ed2-b9b0-e6eadc6b585f"
+  }
+}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="3AfGjeGfelRI2d6Nk8Ze0hHvVQw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.CreateUserMapperTest.mapTesting.executor": "Run",
+    "JUnit.CreateUserValidatorTest.executor": "Run",
+    "JUnit.LocalDateFormatterTest.TestingValidationMethod.executor": "Run",
+    "JUnit.LocalDateFormatterTest.format.executor": "Run",
+    "JUnit.LocalDateFormatterTest.shouldThrowExceptionWhenDateIsInvalid.executor": "Run",
+    "JUnit.PropertiesUtilTest.checkGet.executor": "Run",
+    "JUnit.UserDaoTest.deleteNonExisting.executor": "Run",
+    "JUnit.UserDaoTest.executor": "Run",
+    "JUnit.UserDaoTest.findAll.executor": "Run",
+    "JUnit.UserDaoTest.update.executor": "Run",
+    "JUnit.UserServiceIT.create.executor": "Run",
+    "JUnit.UserServiceIT.executor": "Run",
+    "JUnit.UserServiceTest.createFailShouldThorwException.executor": "Run",
+    "JUnit.UserServiceTest.createFailShouldThrowException.executor": "Run",
+    "JUnit.UserServiceTest.createSuccess.executor": "Run",
+    "JUnit.UserServiceTest.loginFail.executor": "Run",
+    "JUnit.UserServiceTest.loginSuccess.executor": "Run",
+    "Maven.junit5-trainer [verify].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "fix-branch",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/junit5-trainer",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.dmdev.dao" />
+      <recent name="com.dmdev.util" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.UserServiceIT">
+    <configuration name="UserDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit5-trainer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dmdev.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dmdev.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.dao.UserDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDaoTest.deleteNonExisting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit5-trainer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dmdev.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dmdev.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.dao.UserDaoTest" />
+      <option name="METHOD_NAME" value="deleteNonExisting" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDaoTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit5-trainer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dmdev.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dmdev.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.dao.UserDaoTest" />
+      <option name="METHOD_NAME" value="update" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit5-trainer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dmdev.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dmdev.service" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.service.UserServiceIT" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceIT.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit5-trainer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dmdev.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dmdev.service" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.service.UserServiceIT" />
+      <option name="METHOD_NAME" value="create" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserServiceIT" />
+        <item itemvalue="JUnit.UserServiceIT.create" />
+        <item itemvalue="JUnit.UserDaoTest" />
+        <item itemvalue="JUnit.UserDaoTest.update" />
+        <item itemvalue="JUnit.UserDaoTest.deleteNonExisting" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c507ee89-428d-4521-bbde-c12f6293e7f5" name="Changes" comment="" />
+      <created>1772976351044</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1772976351044</updated>
+    </task>
+    <servers />
+  </component>
+</project>
