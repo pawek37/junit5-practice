@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 import java.time.Instant;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class CreateSubscriptionMapperTest {
 
@@ -20,7 +19,7 @@ class CreateSubscriptionMapperTest {
         Subscription expectedResult = Subscription.builder()
                 .id(null)
                 .userId(1)
-                .name("Ivan")
+                .name("Netflix")
                 .provider(Provider.APPLE)
                 .expirationDate(Instant.parse("2029-10-05T14:30:00Z"))
                 .status(Status.ACTIVE)

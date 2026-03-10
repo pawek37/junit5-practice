@@ -15,8 +15,8 @@ class ValidationResultTest {
 
     @Test
     void addElementShouldChangeSizeOfErrorList() {
-//        errors.add(Error.of(100, "userId is invalid"));
-//        assertThat(errors).hasSize(1);
+        errors.add(Error.of(100, "userId is invalid"));
+        assertThat(errors).hasSize(1);
     }
 
     @Test
