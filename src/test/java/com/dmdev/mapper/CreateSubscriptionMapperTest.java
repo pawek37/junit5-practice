@@ -26,7 +26,7 @@ class CreateSubscriptionMapperTest {
                 .build();
         CreateSubscriptionDto dto = CreateSubscriptionDto.builder()
                 .userId(1)
-                .name("Ivan")
+                .name("Netflix")
                 .provider(Provider.APPLE.name())
                 .expirationDate(Instant.parse("2029-10-05T14:30:00Z"))
                 .build();

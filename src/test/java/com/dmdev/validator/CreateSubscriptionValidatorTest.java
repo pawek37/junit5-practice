@@ -2,16 +2,13 @@ package com.dmdev.validator;
 
 import com.dmdev.dto.CreateSubscriptionDto;
 import com.dmdev.entity.Provider;
-import lombok.Getter;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.Instant;
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 class CreateSubscriptionValidatorTest {
 
@@ -70,12 +67,40 @@ class CreateSubscriptionValidatorTest {
         assertThat(actualResult.getErrors().get(0)).isEqualTo(Error.of(102,"provider is invalid"));
     }
     @Test
+    void validationFailByWrongProvider() {
+        CreateSubscriptionDto dto = CreateSubscriptionDto.builder()
+                .userId(0)
+                .name("Ivan")
+                .provider("Yandex")
+                .expirationDate(Instant.parse("2029-10-05T14:30:00Z"))
+                .build();
+
+        ValidationResult actualResult = validator.validate(dto);
+
+        assertThat(actualResult.getErrors()).hasSize(1);
+        assertThat(actualResult.getErrors().get(0)).isEqualTo(Error.of(102,"provider is invalid"));
+    }
+    @Test
     void validationFailByWrongExpirationDate() {
         CreateSubscriptionDto dto = CreateSubscriptionDto.builder()
                 .userId(0)
                 .name("Ivan")
                 .provider(Provider.APPLE.name())
                 .expirationDate(Instant.parse("2021-10-05T14:30:00Z"))
+                .build();
+
+        ValidationResult actualResult = validator.validate(dto);
+
+        assertThat(actualResult.getErrors()).hasSize(1);
+        assertThat(actualResult.getErrors().get(0)).isEqualTo(Error.of(103,"expirationDate is invalid"));
+    }
+    @Test
+    void validationFailByNullExpirationDate() {
+        CreateSubscriptionDto dto = CreateSubscriptionDto.builder()
+                .userId(0)
+                .name("Ivan")
+                .provider(Provider.APPLE.name())
+                .expirationDate(null)
                 .build();
 
         ValidationResult actualResult = validator.validate(dto);

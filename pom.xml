@@ -68,6 +68,7 @@
         </dependency>
     </dependencies>
 
+
     <build>
         <plugins>
             <plugin>
@@ -111,6 +112,13 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.7</version>
+                <configuration>
+                    <excludes>
+                        <exclude>**/dto/**</exclude>
+                        <exclude>**/validator/Error*</exclude>
+                        <exclude>**/entity/Subscription*</exclude>
+                </excludes>
+                </configuration>
                 <executions>
                     <execution>
                         <id>prepare-agent</id>

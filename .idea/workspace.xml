@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c507ee89-428d-4521-bbde-c12f6293e7f5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/dao/SubscriptionDaoITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/dao/SubscriptionDaoITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/entity/ProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/entity/ProviderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/mapper/CreateSubscriptionMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/mapper/CreateSubscriptionMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/service/UserServiceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/service/UserServiceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/validator/CreateSubscriptionValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/validator/CreateSubscriptionValidatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/validator/ValidationResultTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/validator/ValidationResultTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +26,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="JUnit5 Test Class" />
       </list>
     </option>
@@ -57,12 +63,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.CreateSubscriptionMapperTest.executor": "Run",
     "JUnit.CreateSubscriptionMapperTest.mapSuccess.executor": "Run",
     "JUnit.CreateSubscriptionValidatorTest.executor": "Run",
     "JUnit.CreateSubscriptionValidatorTest.validationFailByName.executor": "Run",
+    "JUnit.CreateSubscriptionValidatorTest.validationFailByNullExpirationDate.executor": "Run",
     "JUnit.CreateSubscriptionValidatorTest.validationFailByUserId.executor": "Run",
     "JUnit.CreateSubscriptionValidatorTest.validationFailByWrongDifferentValues.executor": "Run",
     "JUnit.CreateSubscriptionValidatorTest.validationFailByWrongExpirationDate.executor": "Run",
+    "JUnit.CreateSubscriptionValidatorTest.validationFailByWrongProvider.executor": "Run",
     "JUnit.CreateSubscriptionValidatorTest.validationSuccess.executor": "Run",
     "JUnit.CreateUserMapperTest.mapTesting.executor": "Run",
     "JUnit.CreateUserValidatorTest.executor": "Run",
@@ -72,6 +81,20 @@
     "JUnit.PropertiesUtilTest.checkGet.executor": "Run",
     "JUnit.PropertiesUtilTest.executor": "Run",
     "JUnit.PropertiesUtilTest.get.executor": "Run",
+    "JUnit.ProviderTest.executor": "Run",
+    "JUnit.ProviderTest.findByNameFail (1).executor": "Run",
+    "JUnit.ProviderTest.findByNameFail.executor": "Run",
+    "JUnit.ProviderTest.findByNameFailOptional (1).executor": "Run",
+    "JUnit.ProviderTest.findByNameFailOptional.executor": "Run",
+    "JUnit.ProviderTest.findByNameOptSuccess.executor": "Run",
+    "JUnit.ProviderTest.findByNameSuccess.executor": "Run",
+    "JUnit.SubscriptionDaoITest.delete.executor": "Run",
+    "JUnit.SubscriptionDaoITest.findAll.executor": "Run",
+    "JUnit.SubscriptionDaoITest.findById.executor": "Run",
+    "JUnit.SubscriptionDaoITest.findByUserId.executor": "Run",
+    "JUnit.SubscriptionDaoITest.insert.executor": "Run",
+    "JUnit.SubscriptionDaoITest.tryToDeleteIfUserDoNotExist.executor": "Run",
+    "JUnit.SubscriptionDaoITest.update.executor": "Run",
     "JUnit.SubscriptionServiceTest.cancelSubscriptionAlreadyExpired.executor": "Run",
     "JUnit.SubscriptionServiceTest.cancelSubscriptionAlreadyExpiredThrowsException.executor": "Run",
     "JUnit.SubscriptionServiceTest.cancelSubscriptionNotFoundToBeCanceled.executor": "Debug",
@@ -89,8 +112,11 @@
     "JUnit.UserDaoTest.executor": "Run",
     "JUnit.UserDaoTest.findAll.executor": "Run",
     "JUnit.UserDaoTest.update.executor": "Run",
+    "JUnit.UserServiceIT.cancel.executor": "Run",
     "JUnit.UserServiceIT.create.executor": "Run",
     "JUnit.UserServiceIT.executor": "Run",
+    "JUnit.UserServiceIT.expire.executor": "Run",
+    "JUnit.UserServiceIT.upsert.executor": "Run",
     "JUnit.UserServiceTest.createFailShouldThorwException.executor": "Run",
     "JUnit.UserServiceTest.createFailShouldThrowException.executor": "Run",
     "JUnit.UserServiceTest.createSuccess.executor": "Run",
@@ -98,9 +124,12 @@
     "JUnit.UserServiceTest.loginSuccess.executor": "Run",
     "JUnit.ValidationResultTest.add.executor": "Run",
     "JUnit.ValidationResultTest.addElementShouldChangeSizeOfErrorList.executor": "Run",
+    "JUnit.ValidationResultTest.executor": "Run",
+    "JUnit.ValidationResultTest.getErrors.executor": "Run",
     "JUnit.ValidationResultTest.hasErrors.executor": "Run",
     "JavaClassFindUsagesOptions.isFieldsUsages": "true",
     "JavaClassFindUsagesOptions.isMethodsUsages": "true",
+    "Maven.junit5-trainer [test].executor": "Run",
     "Maven.junit5-trainer [verify].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -124,89 +153,88 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.dmdev.service" />
-      <recent name="com.dmdev.mapper" />
-      <recent name="com.dmdev.validator" />
+      <recent name="com.dmdev.dto" />
+      <recent name="com.dmdev.entity" />
       <recent name="com.dmdev.util" />
       <recent name="com.dmdev.dao" />
+      <recent name="com.dmdev.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SubscriptionServiceTest.expireSuccess">
-    <configuration name="SubscriptionServiceTest.cancelSubscriptionAlreadyExpiredThrowsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CreateSubscriptionValidatorTest.validationFailByNullExpirationDate">
+    <configuration name="CreateSubscriptionValidatorTest.validationFailByNullExpirationDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5-trainer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dmdev.service.*" />
+          <option name="PATTERN" value="com.dmdev.validator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dmdev.service" />
-      <option name="MAIN_CLASS_NAME" value="com.dmdev.service.SubscriptionServiceTest" />
-      <option name="METHOD_NAME" value="cancelSubscriptionAlreadyExpiredThrowsException" />
+      <option name="PACKAGE_NAME" value="com.dmdev.validator" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.validator.CreateSubscriptionValidatorTest" />
+      <option name="METHOD_NAME" value="validationFailByNullExpirationDate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubscriptionServiceTest.cancelSubscriptionNotFoundToBeCanceledThrowsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateSubscriptionValidatorTest.validationFailByWrongProvider" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5-trainer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dmdev.service.*" />
+          <option name="PATTERN" value="com.dmdev.validator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dmdev.service" />
-      <option name="MAIN_CLASS_NAME" value="com.dmdev.service.SubscriptionServiceTest" />
-      <option name="METHOD_NAME" value="cancelSubscriptionNotFoundToBeCanceledThrowsException" />
+      <option name="PACKAGE_NAME" value="com.dmdev.validator" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.validator.CreateSubscriptionValidatorTest" />
+      <option name="METHOD_NAME" value="validationFailByWrongProvider" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubscriptionServiceTest.cancelSubscriptionSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProviderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5-trainer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dmdev.service.*" />
+          <option name="PATTERN" value="com.dmdev.entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dmdev.service" />
-      <option name="MAIN_CLASS_NAME" value="com.dmdev.service.SubscriptionServiceTest" />
-      <option name="METHOD_NAME" value="cancelSubscriptionSuccessful" />
+      <option name="PACKAGE_NAME" value="com.dmdev.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.entity.ProviderTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProviderTest.findByNameFail (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit5-trainer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dmdev.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dmdev.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.entity.ProviderTest" />
+      <option name="METHOD_NAME" value="findByNameFail(java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubscriptionServiceTest.expireShouldThrowExceptionWhenSubscriptionAlreadyExpired" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProviderTest.findByNameFailOptional (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5-trainer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dmdev.service.*" />
+          <option name="PATTERN" value="com.dmdev.entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dmdev.service" />
-      <option name="MAIN_CLASS_NAME" value="com.dmdev.service.SubscriptionServiceTest" />
-      <option name="METHOD_NAME" value="expireShouldThrowExceptionWhenSubscriptionAlreadyExpired" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SubscriptionServiceTest.expireSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="junit5-trainer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dmdev.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dmdev.service" />
-      <option name="MAIN_CLASS_NAME" value="com.dmdev.service.SubscriptionServiceTest" />
-      <option name="METHOD_NAME" value="expireSuccess" />
+      <option name="PACKAGE_NAME" value="com.dmdev.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.entity.ProviderTest" />
+      <option name="METHOD_NAME" value="findByNameFailOptional(java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -214,11 +242,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SubscriptionServiceTest.expireSuccess" />
-        <item itemvalue="JUnit.SubscriptionServiceTest.cancelSubscriptionSuccessful" />
-        <item itemvalue="JUnit.SubscriptionServiceTest.cancelSubscriptionAlreadyExpiredThrowsException" />
-        <item itemvalue="JUnit.SubscriptionServiceTest.cancelSubscriptionNotFoundToBeCanceledThrowsException" />
-        <item itemvalue="JUnit.SubscriptionServiceTest.expireShouldThrowExceptionWhenSubscriptionAlreadyExpired" />
+        <item itemvalue="JUnit.CreateSubscriptionValidatorTest.validationFailByNullExpirationDate" />
+        <item itemvalue="JUnit.CreateSubscriptionValidatorTest.validationFailByWrongProvider" />
+        <item itemvalue="JUnit.ProviderTest" />
+        <item itemvalue="JUnit.ProviderTest.findByNameFail (1)" />
+        <item itemvalue="JUnit.ProviderTest.findByNameFailOptional (1)" />
       </list>
     </recent_temporary>
   </component>
