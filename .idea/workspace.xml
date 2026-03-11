@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c507ee89-428d-4521-bbde-c12f6293e7f5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/dao/SubscriptionDaoITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/dao/SubscriptionDaoITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/entity/ProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/entity/ProviderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/mapper/CreateSubscriptionMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/mapper/CreateSubscriptionMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/service/UserServiceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/service/UserServiceIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/validator/CreateSubscriptionValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/validator/CreateSubscriptionValidatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/validator/ValidationResultTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/validator/ValidationResultTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/service/SubscriptionServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/service/SubscriptionServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +153,7 @@
       <recent name="com.dmdev.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CreateSubscriptionValidatorTest.validationFailByNullExpirationDate">
+  <component name="RunManager" selected="JUnit.SubscriptionServiceTest.upsertSubscriptionStatusExpiredFoundInDB">
     <configuration name="CreateSubscriptionValidatorTest.validationFailByNullExpirationDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5-trainer" />
       <extension name="coverage">
@@ -224,17 +217,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProviderTest.findByNameFailOptional (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SubscriptionServiceTest.upsertSubscriptionStatusExpiredFoundInDB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5-trainer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dmdev.entity.*" />
+          <option name="PATTERN" value="com.dmdev.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dmdev.entity" />
-      <option name="MAIN_CLASS_NAME" value="com.dmdev.entity.ProviderTest" />
-      <option name="METHOD_NAME" value="findByNameFailOptional(java.lang.String)" />
+      <option name="PACKAGE_NAME" value="com.dmdev.service" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.service.SubscriptionServiceTest" />
+      <option name="METHOD_NAME" value="upsertSubscriptionStatusExpiredFoundInDB" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -242,11 +235,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SubscriptionServiceTest.upsertSubscriptionStatusExpiredFoundInDB" />
         <item itemvalue="JUnit.CreateSubscriptionValidatorTest.validationFailByNullExpirationDate" />
         <item itemvalue="JUnit.CreateSubscriptionValidatorTest.validationFailByWrongProvider" />
         <item itemvalue="JUnit.ProviderTest" />
         <item itemvalue="JUnit.ProviderTest.findByNameFail (1)" />
-        <item itemvalue="JUnit.ProviderTest.findByNameFailOptional (1)" />
       </list>
     </recent_temporary>
   </component>

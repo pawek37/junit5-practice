@@ -64,18 +64,19 @@ class SubscriptionServiceTest {
                 .expirationDate(Instant.parse("2025-10-05T14:30:00Z"))
                 .status(Status.EXPIRED)
                 .build();
-        List<Subscription> subscriptionList = Arrays.asList(existingExpiredSub, existingSub);
+        List<Subscription> subscriptionList = Arrays.asList(existingExpiredSub, new Subscription());
 
-        ValidationResult validationResult = new ValidationResult();
-        doReturn(validationResult).when(createSubscriptionValidator).validate(dto);
-        doReturn(subscriptionList).when(subscriptionDao).findByUserId(dto.getUserId());
-        doReturn(existingExpiredSub).when(subscriptionDao).upsert(any());
+        doReturn(new ValidationResult()).when(createSubscriptionValidator).validate(dto);
+        doReturn(List.of(existingExpiredSub,new Subscription())).when(subscriptionDao).findByUserId(dto.getUserId());
+        doReturn(existingExpiredSub).when(subscriptionDao).upsert(existingExpiredSub);
+
         Subscription actualResult = service.upsert(dto);
 
         assertAll(
                 () -> assertEquals(Status.ACTIVE, actualResult.getStatus()),
                 () -> assertEquals(dto.getExpirationDate(), actualResult.getExpirationDate()),
-                () -> Mockito.verify(subscriptionDao).upsert(any()),
+                () -> assertEquals(dto.getUserId(), actualResult.getUserId()),
+                () -> Mockito.verify(subscriptionDao).upsert(existingExpiredSub),
                 () -> Mockito.verifyNoInteractions(createSubscriptionMapper)
         );
     }
@@ -90,11 +91,9 @@ class SubscriptionServiceTest {
                 .expirationDate(Instant.parse("2027-10-05T14:30:00Z"))
                 .status(Status.ACTIVE)
                 .build();
-        List<Subscription> subscriptionList = Arrays.asList(existingActiveSub, existingSub);
 
-        ValidationResult validationResult = new ValidationResult();
-        doReturn(validationResult).when(createSubscriptionValidator).validate(dto);
-        doReturn(subscriptionList).when(subscriptionDao).findByUserId(dto.getUserId());
+        doReturn(new ValidationResult()).when(createSubscriptionValidator).validate(dto);
+        doReturn(List.of(existingActiveSub, new Subscription())).when(subscriptionDao).findByUserId(dto.getUserId());
         doReturn(existingActiveSub).when(subscriptionDao).upsert(any());
 
         Subscription actualResult = service.upsert(dto);
@@ -102,6 +101,7 @@ class SubscriptionServiceTest {
         assertAll(
                 () -> assertEquals(Status.ACTIVE, actualResult.getStatus()),
                 () -> assertEquals(dto.getExpirationDate(), actualResult.getExpirationDate()),
+                () -> assertEquals(dto.getUserId(), actualResult.getUserId()),
                 () -> Mockito.verify(subscriptionDao).upsert(any()),
                 () -> Mockito.verifyNoInteractions(createSubscriptionMapper)
         );
