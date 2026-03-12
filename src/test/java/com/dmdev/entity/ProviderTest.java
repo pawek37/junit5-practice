@@ -43,13 +43,6 @@ class ProviderTest {
         assertThat(actual).isEmpty();
     }
 
-    public static Stream<Arguments> providerNamesNotExisted() {
-        return Stream.of(
-                Arguments.of("dummy", null),
-                Arguments.of("dummy", null)
-        );
-    }
-
     public static Stream<Arguments> providerNames() {
         return Stream.of(
                 Arguments.of("apple", Provider.APPLE),

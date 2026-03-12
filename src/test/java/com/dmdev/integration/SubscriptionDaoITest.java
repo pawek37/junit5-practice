@@ -1,9 +1,9 @@
-package com.dmdev.dao;
+package com.dmdev.integration;
 
+import com.dmdev.dao.SubscriptionDao;
 import com.dmdev.entity.Provider;
 import com.dmdev.entity.Status;
 import com.dmdev.entity.Subscription;
-import com.dmdev.integration.IntegrationTestBase;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -42,6 +42,18 @@ class SubscriptionDaoITest extends IntegrationTestBase {
         Assertions.assertThat(actualResult).isPresent();
         Assertions.assertThat(actualResult.get()).isEqualTo(sub1);
     }
+    @Test
+    void NoFindById() {
+        int nonExistedId = 999;
+
+        Subscription sub1 = subscriptionDao.insert(getSubscription("Netflix"));
+        Subscription sub2 = subscriptionDao.insert(getSubscription("Spotify"));
+        Subscription sub3 = subscriptionDao.insert(getSubscription("OnlyFans"));
+
+        Optional<Subscription> actualResult = subscriptionDao.findById(999);
+
+        Assertions.assertThat(actualResult).isEmpty();
+    }
 
     @Test
     void delete() {
@@ -50,7 +62,7 @@ class SubscriptionDaoITest extends IntegrationTestBase {
         boolean delete = subscriptionDao.delete(sub1.getId());
 
         Assertions.assertThat(delete).isTrue();
-        Assertions.assertThat(subscriptionDao.findAll()).hasSize(0);
+        Assertions.assertThat(subscriptionDao.findAll()).isEmpty();
     }
     @Test
     void tryToDeleteIfUserDoNotExist() {
@@ -66,11 +78,23 @@ class SubscriptionDaoITest extends IntegrationTestBase {
     void update() {
         Subscription sub1 = subscriptionDao.insert(getSubscription("Netflix"));
         sub1.setName("Testing");
-        sub1.setId(3);
 
         Subscription actualResult = subscriptionDao.update(sub1);
 
         Assertions.assertThat(actualResult).isEqualTo(sub1);
+        Assertions.assertThat(actualResult.getName()).isEqualTo("Testing");
+    }
+    @Test
+    void updateNonExistedId() {
+        Subscription subNoExist = getSubscription("Ghost");
+        subNoExist.setName("NoGhost");
+        subNoExist.setId(999);
+        Subscription updatedSubNoExist = subscriptionDao.update(subNoExist);
+
+
+        Assertions.assertThat(subNoExist).isEqualTo(updatedSubNoExist);
+        Assertions.assertThat(subscriptionDao.findById(updatedSubNoExist.getId())).isEmpty();
+
     }
 
     @Test
@@ -89,8 +113,8 @@ class SubscriptionDaoITest extends IntegrationTestBase {
 
     @Test
     void findByUserId() {
-        Subscription netflix = subscriptionDao.insert(getSubscription("Netflix"));
-        Subscription spotify = subscriptionDao.insert(getSubscription("Spotify"));
+        Subscription netflixUser1 = subscriptionDao.insert(getSubscription("Netflix"));
+        Subscription spotifyUser1 = subscriptionDao.insert(getSubscription("Spotify"));
         Subscription otherUserNetflix = subscriptionDao.insert(Subscription.builder()
                 .userId(2)
                 .name("Netflix")
@@ -99,13 +123,35 @@ class SubscriptionDaoITest extends IntegrationTestBase {
                 .status(Status.ACTIVE)
                 .build());
 
-        List<Subscription>listOfUserSubscription = Arrays.asList(netflix,spotify);
+        List<Subscription>listOfUsersSubscription = Arrays.asList(netflixUser1,spotifyUser1,otherUserNetflix);
 
-        List<Subscription> byUserId = subscriptionDao.findByUserId(netflix.getUserId());
+        List<Subscription> actualResult = subscriptionDao.findByUserId(netflixUser1.getUserId());
 
-        Assertions.assertThat(byUserId).hasSize(2);
-        Assertions.assertThat(byUserId).contains(netflix,spotify);
-        Assertions.assertThat(byUserId).isEqualTo(listOfUserSubscription);
+        Assertions.assertThat(actualResult).hasSize(2);
+        Assertions.assertThat(actualResult).contains(netflixUser1,spotifyUser1);
+        Assertions.assertThat(actualResult).isNotEqualTo(listOfUsersSubscription);
+    }
+    @Test
+    void NoResultFindByUserId() {
+
+        int nonExistentId = 999;
+
+        Subscription netflixUser1 = subscriptionDao.insert(getSubscription("Netflix"));
+        Subscription spotifyUser1 = subscriptionDao.insert(getSubscription("Spotify"));
+        Subscription otherUserNetflix = subscriptionDao.insert(Subscription.builder()
+                .userId(2)
+                .name("Netflix")
+                .provider(Provider.APPLE)
+                .expirationDate(Instant.parse("2029-10-05T14:30:00Z"))
+                .status(Status.ACTIVE)
+                .build());
+
+        List<Subscription>listOfUsersSubscription = Arrays.asList(netflixUser1,spotifyUser1,otherUserNetflix);
+
+        List<Subscription> actualResult = subscriptionDao.findByUserId(nonExistentId);
+
+        Assertions.assertThat(actualResult).isEmpty();
+
     }
 
     private static Subscription getSubscription(String name) {

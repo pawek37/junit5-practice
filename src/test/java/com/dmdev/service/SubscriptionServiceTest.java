@@ -13,6 +13,7 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.ArgumentCaptor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -28,6 +29,7 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
 class SubscriptionServiceTest {
@@ -67,7 +69,7 @@ class SubscriptionServiceTest {
         List<Subscription> subscriptionList = Arrays.asList(existingExpiredSub, new Subscription());
 
         doReturn(new ValidationResult()).when(createSubscriptionValidator).validate(dto);
-        doReturn(List.of(existingExpiredSub,new Subscription())).when(subscriptionDao).findByUserId(dto.getUserId());
+        doReturn(List.of(existingExpiredSub, new Subscription())).when(subscriptionDao).findByUserId(dto.getUserId());
         doReturn(existingExpiredSub).when(subscriptionDao).upsert(existingExpiredSub);
 
         Subscription actualResult = service.upsert(dto);
@@ -119,11 +121,10 @@ class SubscriptionServiceTest {
 
         List<Subscription> subscriptionEmptyList = new ArrayList<>();
 
-        ValidationResult validationResult = new ValidationResult();
-        doReturn(validationResult).when(createSubscriptionValidator).validate(dto);
+        doReturn(new ValidationResult()).when(createSubscriptionValidator).validate(dto);
         doReturn(subscriptionEmptyList).when(subscriptionDao).findByUserId(dto.getUserId());
         doReturn(newnewSub).when(createSubscriptionMapper).map(dto);
-        doReturn(newnewSub).when(subscriptionDao).upsert(newnewSub);
+        doReturn(newnewSub).when(subscriptionDao).upsert(any());
 
         Subscription actualResult = service.upsert(dto);
 
@@ -177,20 +178,34 @@ class SubscriptionServiceTest {
 
         service.cancel(activeSubscription.getId());
 
+        ArgumentCaptor<Subscription> subscriptionCaptor = ArgumentCaptor.forClass(Subscription.class);
+        verify(subscriptionDao).update(subscriptionCaptor.capture());
+
+        Subscription updatedSub = subscriptionCaptor.getValue();
+
         assertAll(
                 () -> assertEquals(Status.CANCELED, activeSubscription.getStatus()),
-                () -> Mockito.verify(subscriptionDao).update(any())
+                () -> assertEquals(Status.CANCELED, updatedSub.getStatus()),
+                () -> assertEquals(activeSubscription.getExpirationDate(),updatedSub.getExpirationDate())
         );
     }
 
     @Test
     void expireShouldThrowExceptionWhenSubscriptionNotFoundByID() {
-        assertThrows(IllegalArgumentException.class, () -> service.expire(0));
+
+        int nonExisted = 666;
+        doReturn(Optional.empty()).when(subscriptionDao).findById(any());
+
+        assertThrows(IllegalArgumentException.class, () -> service.expire(nonExisted));
+        assertAll(
+                () -> Mockito.verify(subscriptionDao).findById(nonExisted),
+                () -> Mockito.verify(subscriptionDao, Mockito.never()).update(any())
+        );
     }
 
     @Test
     void expireShouldThrowExceptionWhenSubscriptionAlreadyExpired() {
-        Subscription activeSubscription = Subscription.builder()
+        Subscription expiredSub = Subscription.builder()
                 .id(1)
                 .userId(1)
                 .name("Netflix")
@@ -199,9 +214,12 @@ class SubscriptionServiceTest {
                 .status(Status.EXPIRED)
                 .build();
 
-        doReturn(Optional.of(activeSubscription)).when(subscriptionDao).findById(activeSubscription.getId());
+        doReturn(Optional.of(expiredSub)).when(subscriptionDao).findById(expiredSub.getId());
 
-        assertThrows(SubscriptionException.class, () -> service.expire(activeSubscription.getId()));
+        assertThrows(SubscriptionException.class, () -> service.expire(expiredSub.getId()));
+        assertAll(
+                () -> Mockito.verify(subscriptionDao,Mockito.never()).update(expiredSub)
+        );
     }
 
     @Test
