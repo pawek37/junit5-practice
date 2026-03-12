@@ -36,8 +36,9 @@ public class UserServiceIT extends IntegrationTestBase {
         }
         @Test
     void upsert(){
-            Subscription expectedResult = getSubscription();
+
             CreateSubscriptionDto dto = getCreateSubscriptionDto();
+
             Subscription upsert = service.upsert(dto);
 
             Subscription actualResult = subscriptionDao.findById(upsert.getId()).orElseThrow();
